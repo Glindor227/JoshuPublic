@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="unknown_error">Unknown error</string>
+    <string name="unknown_server_error">Unknown server error</string>
+    <string name="alert_internet_problem">Internet connection failed. Try again later.</string>
+</resources>

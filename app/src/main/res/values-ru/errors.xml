@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="unknown_error">Неизвестная ошибка</string>
+    <string name="unknown_server_error">Неизвестная ошибка сервера</string>
+    <string name="alert_internet_problem">Проблемы с интернет подключением. Попробуйте повторить позже.</string>
+</resources>

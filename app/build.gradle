@@ -1,0 +1,170 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+androidExtensions {
+    experimental = true
+}
+
+android {
+    def flavorsProduct
+
+    applicationVariants.all { variant ->
+        def debug = variant.buildType.name == "debug" ? "debug_" : ""
+        println variant.name
+        variant.outputs.all {
+            outputFileName = "${debug}${variant.applicationId}_v.${variant.versionName}.apk"
+        }
+    }
+
+    signingConfigs {
+        test {
+            try {
+                keyAlias TEST_ALIAS
+                keyPassword TEST_KEY_PASSWORD
+                storeFile file('../keystore.jks')
+                storePassword TEST_KEYSTORE_PASSWORD
+            }
+            catch (ex) {
+                throw new InvalidUserDataException("You should define TEST_KEYSTORE_PASSWORD and TEST_KEY_PASSWORD in gradle.properties.")
+            }
+        }
+        prod {
+            try {
+                keyAlias PROD_ALIAS
+                keyPassword PROD_KEY_PASSWORD
+                storeFile file('../keystore_release.jks')
+                storePassword PROD_KEYSTORE_PASSWORD
+            }
+            catch (ex) {
+                throw new InvalidUserDataException("You should define PROD_KEYSTORE_PASSWORD and PROD_KEY_PASSWORD in gradle.properties.")
+            }
+        }
+    }
+
+    compileSdkVersion rootProject.ext.toolVersions.android.compileSdk
+    buildToolsVersion rootProject.ext.toolVersions.android.buildTools
+
+    defaultConfig {
+        applicationId "com.joshu.app"
+        minSdkVersion rootProject.ext.toolVersions.android.minSdk
+        targetSdkVersion rootProject.ext.toolVersions.android.targetSdk
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        manifestPlaceholders = [
+                appIcon     : "@mipmap/ic_launcher",
+                appIconRound: "@mipmap/ic_launcher_round"
+        ]
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.prod
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            applicationIdSuffix ".debug"
+            signingConfig signingConfigs.test
+            minifyEnabled false
+        }
+    }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        joshuProd {
+            buildConfigField "String", "API_URL", PROD_URL
+            buildConfigField "boolean", "ENABLE_LOG", "false"
+            buildConfigField "String", "SERVER_VERSION", rootProject.ext.serverVersion
+
+            signingConfig signingConfigs.prod
+
+            flavorsProduct = "prod"
+        }
+
+        joshuDev {
+            buildConfigField "String", "API_URL", DEV_URL
+            buildConfigField "boolean", "ENABLE_LOG", "true"
+            buildConfigField "String", "SERVER_VERSION", rootProject.ext.serverVersion
+
+            flavorsProduct = "dev"
+            versionNameSuffix = "-dev"
+            signingConfig signingConfigs.test
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    implementation 'com.google.android.material:material:1.1.0'
+
+    implementation "androidx.core:core-ktx:1.3.0"
+    implementation "androidx.appcompat:appcompat:1.1.0"
+    implementation "androidx.constraintlayout:constraintlayout:1.1.3"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    // firebase
+    implementation 'com.google.firebase:firebase-analytics:17.4.3'
+    implementation 'com.google.firebase:firebase-crashlytics:17.0.1'
+
+    // coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.7"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7"
+
+    // di
+    implementation 'com.google.dagger:dagger:2.27'
+    kapt 'com.google.dagger:dagger-compiler:2.27'
+
+    // ui binding
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    kapt 'com.jakewharton:butterknife-compiler:10.2.1'
+
+    // moxy
+    implementation "tech.schoolhelper:moxy-x:1.7.0"
+    implementation "tech.schoolhelper:moxy-x-androidx:1.7.0"
+    kapt "tech.schoolhelper:moxy-x-compiler:1.7.0"
+
+    // ui
+    implementation 'com.facebook.fresco:fresco:2.1.0'
+    implementation 'com.github.prolificinteractive:material-calendarview:2.0.1'
+
+    // network
+    implementation 'com.squareup.retrofit2:retrofit:2.7.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.1'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    implementation 'com.squareup.okhttp3:okhttp:4.2.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.2'
+
+    // debug
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+
+    // logger
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+}
