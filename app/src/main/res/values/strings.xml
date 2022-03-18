@@ -1,6 +1,116 @@
 <resources>
-    <string name="app_name">Joshu</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="app_name" translatable="false">Joshu</string>
+    <string name="statistic">Statistic</string>
+    <string name="calendar">Calendar</string>
+    <string name="list">Folders</string>
+    <string name="today">Now</string>
+    <string name="task">Task</string>
+    <string name="main">Main</string>
+    <string name="lifehack">Lifehack</string>
+
+    <string name="email" translatable="false">Email</string>
+    <string name="sign_in">Sign In</string>
+
+    <!--  priority  -->
+    <string name="priority_important_urgently">Important-Urgently</string>
+    <string name="priority_important_do_not_rush">Important-Do not rush</string>
+    <string name="priority_never_mind_urgently">Never mind-Urgently</string>
+    <string name="priority_never_mind_do_not_rush">Never mind-Do not rush</string>
+
+    <!--  auth main screen  -->
+    <string name="auth_main_welcome">Welcome to JOSHU!</string>
+    <string name="auth_main_login">Continue via Email</string>
+    <string name="auth_main_reg">Email Registration</string>
+    <string name="auth_main_login_plus" translatable="false">G+</string>
+    <string name="auth_main_login_fb" translatable="false">Fb</string>
+    <string name="auth_main_title">By continuing, you agree to the Joshu\nTerms of Use and Privacy Policy.</string>
+    <string name="auth_main_cancel_facebook">Cancel facebook Login</string>
+
+    <!--  forgot screen  -->
+    <string name="forgot_title">Enter your Email address for password recovery</string>
+    <string name="forgot_btn_text">Restore password</string>
+
+    <!--  auth email screen  -->
+    <string name="enter_address_email_hint">Enter email</string>
+    <string name="enter_your_password">Enter password</string>
+    <string name="enter_your_login">Enter login</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login">Login</string>
+    <string name="enter_your_email_and_password">Enter your email and password</string>
+
+    <!--  registration email screen  -->
+    <string name="reg_email_title">Registration</string>
+    <string name="reg_email_subtitle">Registration using email (user mail)</string>
+    <string name="reg_email_btn">Create an account</string>
+    <string name="repid_your_password">Repid password</string>
+
+    <!--  recovery password for email -->
+    <string name="recovery_password_success">Password recovery instructions sent to email</string>
+
+    <!--  create task screen  -->
+    <string name="task_create_success">Task successfully added</string>
+    <string name="task_text_add_to_clipboard_success">Saved to clipboard</string>
+    <string name="task_save_changes">Do you want to save changes?</string>
+
+    <!--  update task screen  -->
+    <string name="task_update_success">Task successfully updated</string>
+
+    <!--  common  -->
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+
+    <!--  repeat  -->
+    <string name="repeat_no">Do not repeat</string>
+    <string name="repeat_every_day">Every day</string>
+    <string name="repeat_every_week">Every week</string>
+    <string name="repeat_every_month">Every month</string>
+    <string name="repeat_every_year">Every year</string>
+
+    <!--  statistic screen -->
+    <string name="statistic_screen_empty_list">The task list is empty.</string>
+    <string name="statistic_screen_today_prefix">Today %s</string>
+
+    <!--  default folder name  -->
+    <string name="folder_work">Work</string>
+    <string name="folder_home">Home</string>
+    <string name="folder_study">Study</string>
+    <string name="folder_health">Health</string>
+    <string name="folder_recreation">Recreation</string>
+
+
+    <!--  shortcuts -->
+    <string name="add_task">Add Task</string>
+    <string name="calendar_shortcut_long_label">Calendar</string>
+    <string name="today_shortcut_long_label">ToDay</string>
+    <string name="static_shortcut_disabled_message">You can\'t delete a shortcut</string>
+
+    <!--  selected folder  -->
+    <string name="folder_selected_create_folder">Create folder</string>
+    <!--  chips filter  -->
+    <string name="chip_wait">Wait</string>
+    <string name="chip_tasks">Tasks</string>
+    <string name="chip_doing">Doing</string>
+    <string name="chip_finish">Finished</string>
+    <string name="chip_habits">Habits</string>
+
+    <!--  widget  -->
+    <string name="widget_add">Add new task</string>
+    <string name="task_delete">Task delete</string>
+    <string name="send_task_message">We transfer your task to the personal assistant Joshu</string>
+
+    <!--  exception  -->
+    <string name="no_material_button_exception_title">The button must inherit from MaterialButton</string>
+
+    <!--  lists screen -->
+    <string name="lists_screen_empty_list">The folder list is empty.</string>
+    <string name="lists_create_folder">Create new folder</string>
+    <string name="new_folder_hint">Add folder name</string>
+    <string name="folder_create_success">Folder successfully added</string>
+    <string name="folder_delete_message">Delete folder with tasks?</string>
+
+    <!--  message dialog -->
+    <string name="dialog_positive_button">OK</string>
+    <string name="dialog_negative_button">Cancel</string>
+    <string name="or">Or</string>
+
 </resources>

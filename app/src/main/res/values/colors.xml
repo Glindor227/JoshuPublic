@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimary">@color/color_253CF1</color>
+    <color name="colorPrimaryDark">@color/color_253CD6</color>
+    <color name="colorAccent">@color/color_253CF1</color>
+
+    <color name="black">#000000</color>
+    <color name="black_10">#1a000000</color>
+    <color name="black_85">#D9000000</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="color_4757EC">#4757EC</color>
+    <color name="color_253CF1">#253CF1</color>
+    <color name="color_253CF1_80">#80253CF1</color>
+    <color name="color_828282">#828282</color>
+    <color name="color_divide">#757575</color>
+    <color name="color_FBFBFB">#FBFBFB</color>
+    <color name="color_F9520A">#F9520A</color>
+    <color name="color_F9520A_80">#80F9520A</color>
+    <color name="color_EDEDED">#EDEDED</color>
+    <color name="color_676EE3">#676EE3</color>
+    <color name="color_676EE3_80">#80676EE3</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_DDDDDD">#DDDDDD</color>
+    <color name="color_F2C94C">#F2C94C</color>
+    <color name="color_555555">#555555</color>
+    <color name="color_111111">#111111</color>
+    <color name="color_A7A7A7">#A7A7A7</color>
+    <color name="color_BDBDBD">#BDBDBD</color>
+    <color name="color_2C2C2C">#2C2C2C</color>
+    <color name="color_EFEFEF">#EFEFEF</color>
+    <color name="color_3B4049">#3B4049</color>
+    <color name="color_FFFFFC">#FFFFFC</color>
+    <color name="color_B9BCBD">#B9BCBD</color>
+    <color name="color_253CD6">#253CD6</color>
+    <color name="color_101828">#101828</color>
+
+    <color name="color_53B885">#53B885</color>
+    <color name="color_53B885_80">#8053B885</color>
+    <color name="color_F9B60A">#F9B60A</color>
+    <color name="color_F9B60A_80">#80F9B60A</color>
+
+    <color name="color_folder_work">#F2C94C</color>
+    <color name="color_folder_home">#27AE60</color>
+    <color name="color_folder_study">#F2994A</color>
+    <color name="color_folder_health">#9B51E0</color>
+    <color name="color_folder_recreation">#2F80ED</color>
+
+    <color name="color_dot_priority_0">#F9520A</color>
+    <color name="color_dot_priority_1">#F9B60A</color>
+    <color name="color_dot_priority_2">@color/color_676EE3</color>
+    <color name="color_dot_priority_3">@color/color_B9BCBD</color>
 </resources>

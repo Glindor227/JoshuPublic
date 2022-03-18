@@ -3,8 +3,8 @@ package com.example.joshu.di.module
 import android.content.Context
 import android.content.SharedPreferences
 import com.example.joshu.mvp.model.Constants
-import com.example.joshu.ui.sharedPreferences.SharedPreferencesImpl
 import com.example.joshu.mvp.model.ISharedPreferences
+import com.example.joshu.ui.sharedPreferences.SharedPreferencesImpl
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

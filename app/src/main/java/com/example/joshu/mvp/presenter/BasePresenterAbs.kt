@@ -106,11 +106,11 @@ abstract class BasePresenterAbs<T: IBaseView>(private val strings: IStrings)
     }
 
     protected fun showErrorInternet() {
-        showError(strings.internetError())
+        showError(strings.internetError)
     }
 
     protected fun showErrorServer() {
-        showError(strings.serverError())
+        showError(strings.serverError)
     }
 
     protected fun showErrorByThrowable(throwable: Throwable) {

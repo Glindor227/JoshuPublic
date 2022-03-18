@@ -6,6 +6,6 @@ import com.example.joshu.mvp.view.IBaseView
 
 @StateStrategyType(OneExecutionStateStrategy::class)
 interface ISplashScreenView: IBaseView {
-    fun showRegistrationScreen()
+    fun showAuthAndRegistrationScreen()
     fun showMainScreen()
 }

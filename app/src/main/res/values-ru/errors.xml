@@ -3,4 +3,13 @@
     <string name="unknown_error">Неизвестная ошибка</string>
     <string name="unknown_server_error">Неизвестная ошибка сервера</string>
     <string name="alert_internet_problem">Проблемы с интернет подключением. Попробуйте повторить позже.</string>
+    <string name="error_invalidate_email">Указан неверный email</string>
+    <string name="error_invalidate_password">Указан неверный пароль</string>
+    <string name="error_auth_user_info">Ошибка получения данных пользователя</string>
+    <string name="error_not_match_password">Не совпадают пароли</string>
+    <string name="error_priority">Приоритет не выбран</string>
+    <string name="error_task_folder">Папка не выбран</string>
+    <string name="error_date_time">Дата и время не выбраны</string>
+    <string name="error_task_text">Не указано название задачи</string>
+    <string name="error_get_speech_text">Ошибка получения теста</string>
 </resources>

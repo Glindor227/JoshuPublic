@@ -1,19 +1,32 @@
 package com.example.joshu.ui
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.ViewGroup
 import android.widget.Toast
 import androidx.annotation.CallSuper
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.arellomobile.mvp.MvpAppCompatDialogFragment
 import com.arellomobile.mvp.MvpAppCompatFragment
+import com.example.joshu.R
 import com.example.joshu.mvp.view.IBaseView
 import com.example.joshu.utils.ViewsUtil
 
 abstract class BaseFragmentAbs: MvpAppCompatFragment(), IBaseView {
+    private var lockScreen: ViewGroup? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         retainInstance = true
+        initLockScreen()
+    }
+
+    protected fun initLockScreen() {
+        lockScreen = LayoutInflater.from(context).inflate(R.layout.lock_screen, null) as ViewGroup
+        ViewsUtil.goneViews(lockScreen)
+        (activity?.window?.decorView as ViewGroup).addView(lockScreen)
     }
 
     override fun closeScreen() {
@@ -32,6 +45,13 @@ abstract class BaseFragmentAbs: MvpAppCompatFragment(), IBaseView {
         showToast(message)
     }
 
+    override fun lockScreen() {
+        ViewsUtil.showViews(lockScreen)
+    }
+
+    override fun unlockScreen() {
+        ViewsUtil.goneViews(lockScreen)
+    }
 
     protected fun setToolBar(toolbar: Toolbar) {
         (activity as AppCompatActivity).setSupportActionBar(toolbar)

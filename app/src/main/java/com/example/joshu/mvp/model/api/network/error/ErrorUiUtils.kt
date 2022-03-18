@@ -9,19 +9,19 @@ object ErrorUiUtils {
         return when (throwable) {
             is ServerException -> {
                 if (throwable.errors.isEmpty()) {
-                    return listOf(strings.serverError())
+                    return listOf(strings.serverError)
                 }
                 throwable.errors.map {
                     when(it.code) {
-                        else -> strings.serverError()
+                        else -> strings.serverError
                     }
                 }
             }
             is HttpException -> {
-                return listOf(strings.serverError())
+                return listOf(strings.serverError)
             }
             is UnknownHostException -> {
-                return listOf(strings.internetError())
+                return listOf(strings.internetError)
             }
             else -> {
                 emptyList()

@@ -1,12 +1,16 @@
 package com.example.joshu.di.module
 
 import android.content.Context
-import com.example.joshu.mvp.model.IImageLoader
-import com.example.joshu.mvp.model.INetworkUtils
-import com.example.joshu.mvp.model.IStrings
+import com.example.joshu.mvp.model.*
+import com.example.joshu.mvp.model.api.IJwtParser
+import com.example.joshu.mvp.model.observable.IObservableTask
+import com.example.joshu.observable.ObservableTaskImpl
 import com.example.joshu.ui.image.FrescoImageLoaderImpl
+import com.example.joshu.ui.jwtParser.JwtParserImpl
 import com.example.joshu.ui.strings.AndroidStringsByResourcesImpl
+import com.example.joshu.ui.validation.ValidationImpl
 import com.example.joshu.utils.NetworkUtilsImpl
+import com.example.joshu.utils.BufferTaskUtilImpl
 import com.facebook.drawee.view.SimpleDraweeView
 import dagger.Module
 import dagger.Provides
@@ -31,5 +35,27 @@ class UtilsModule {
     fun provideStrings(context: Context): IStrings {
         return AndroidStringsByResourcesImpl(context)
     }
+
+    @Provides
+    @Singleton
+    fun provideValidation(): IValidationUtils {
+        return ValidationImpl()
+    }
+
+    @Provides
+    @Singleton
+    fun provideJwtParser(): IJwtParser {
+        return JwtParserImpl()
+    }
+
+    @Provides
+    @Singleton
+    fun provideBufferTaskUtil(): IBufferTaskUtil {
+        return BufferTaskUtilImpl()
+    }
+
+    @Provides
+    @Singleton
+    fun provideObservableTask(): IObservableTask = ObservableTaskImpl()
 }
 

@@ -1,9 +1,9 @@
 package com.example.joshu.di.module
 
 import com.example.joshu.BuildConfig.*
-import com.example.joshu.mvp.model.api.IApiService
 import com.example.joshu.mvp.model.api.network.error.NetworkParserError
 import com.example.joshu.mvp.model.ISharedPreferences
+import com.example.joshu.mvp.model.api.*
 import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
@@ -22,13 +22,26 @@ import javax.inject.Singleton
 @Module
 class RetrofitModule {
     companion object {
-        private const val API_HEADER_KEY = "TOKEN AUTH"
+        const val API_HEADER_KEY = "X-CSRFToken"
+        const val TOKEN_PREFIX = ""
     }
 
     @Provides
     @Singleton
     fun provideApiService(retrofit: Retrofit): IApiService {
         return retrofit.create(IApiService::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideTaskApiService(retrofit: Retrofit): ITaskApiService {
+        return retrofit.create(ITaskApiService::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideTaskFolderApiService(retrofit: Retrofit): ITaskFolderApiService {
+        return retrofit.create(ITaskFolderApiService::class.java)
     }
 
     @Provides
@@ -51,7 +64,8 @@ class RetrofitModule {
     @Provides
     @Singleton
     fun provideOkHttpClient(sharedPreferencesModel: ISharedPreferences,
-                            httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
+                            httpLoggingInterceptor: HttpLoggingInterceptor,
+                            tokenAuthenticator: TokenAuthenticator): OkHttpClient {
 
         val dispatcher = Dispatcher()
         dispatcher.maxRequests = 1
@@ -73,10 +87,10 @@ class RetrofitModule {
                 val requestBuilder = original.newBuilder()
                     .header("Content-Type", "application/json")
 
-                val accessToken = sharedPreferencesModel.getAccessToken()
+                val accessToken = sharedPreferencesModel.accessToken
 
                 accessToken?.let {
-                    requestBuilder.header(API_HEADER_KEY, it)
+                    requestBuilder.header(API_HEADER_KEY, TOKEN_PREFIX + it)
                 }
 
                 val request = requestBuilder
@@ -85,6 +99,7 @@ class RetrofitModule {
 
                 chain.proceed(request)
             }
+            .authenticator(tokenAuthenticator)
             .dispatcher(dispatcher)
 
             .connectTimeout(40, TimeUnit.SECONDS)
@@ -111,7 +126,13 @@ class RetrofitModule {
     @Singleton
     fun provideGson(): Gson {
         return GsonBuilder()
-            .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
+//            .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
             .create()
+    }
+
+    @Provides
+    @Singleton
+    fun provideTokenAuthenticator(sharedPreferencesModel: ISharedPreferences, jwtParser: IJwtParser): TokenAuthenticator {
+        return TokenAuthenticator(sharedPreferencesModel, jwtParser)
     }
 }

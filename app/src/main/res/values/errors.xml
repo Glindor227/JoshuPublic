@@ -3,4 +3,13 @@
     <string name="unknown_error">Unknown error</string>
     <string name="unknown_server_error">Unknown server error</string>
     <string name="alert_internet_problem">Internet connection failed. Try again later.</string>
+    <string name="error_invalidate_email">Invalid email specified</string>
+    <string name="error_invalidate_password">Invalid email specified</string>
+    <string name="error_not_match_password">Do not match passwords</string>
+    <string name="error_auth_user_info">Error get user profile</string>
+    <string name="error_priority">Priority not selected</string>
+    <string name="error_task_folder">No folder selected</string>
+    <string name="error_date_time">Date and time not selected</string>
+    <string name="error_task_text">Missing task name</string>
+    <string name="error_get_speech_text">Error get text</string>
 </resources>

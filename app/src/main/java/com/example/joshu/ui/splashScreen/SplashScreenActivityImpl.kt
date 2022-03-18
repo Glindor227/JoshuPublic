@@ -7,7 +7,8 @@ import com.example.joshu.R
 import com.example.joshu.di.Injector
 import com.example.joshu.mvp.model.IStrings
 import com.example.joshu.ui.BaseActivityAbs
-import com.example.joshu.ui.mainScreen.MainActivity
+import com.example.joshu.ui.auth.mainScreen.AuthMainScreenActivityImpl
+import com.example.joshu.ui.mainScreen.MainScreenActivityImpl
 import javax.inject.Inject
 
 class SplashScreenActivityImpl: BaseActivityAbs(), ISplashScreenView {
@@ -52,12 +53,12 @@ class SplashScreenActivityImpl: BaseActivityAbs(), ISplashScreenView {
         presenter.onStop()
     }
 
-    override fun showRegistrationScreen() {
-//        TODO("Not yet implemented")
+    override fun showAuthAndRegistrationScreen() {
+        AuthMainScreenActivityImpl.show(this)
     }
 
     override fun showMainScreen() {
-        MainActivity.show(this)
+        MainScreenActivityImpl.show(this)
     }
 
     override fun initView() {

@@ -1,14 +1,29 @@
 package com.example.joshu.ui
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.ViewGroup
 import android.widget.Toast
+import androidx.annotation.CallSuper
 import com.arellomobile.mvp.MvpAppCompatActivity
+import com.example.joshu.R
 import com.example.joshu.mvp.view.IBaseView
 import com.example.joshu.utils.ViewsUtil
 
 abstract class BaseActivityAbs: MvpAppCompatActivity(), IBaseView {
+    private var lockScreen: ViewGroup? = null
+
+    @CallSuper
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        initLockScreen()
+    }
+
+    protected fun initLockScreen() {
+        lockScreen = LayoutInflater.from(this).inflate(R.layout.lock_screen, null) as ViewGroup
+        ViewsUtil.goneViews(lockScreen)
+        (window.decorView as ViewGroup).addView(lockScreen)
     }
 
     override fun closeScreen() {
@@ -20,13 +35,15 @@ abstract class BaseActivityAbs: MvpAppCompatActivity(), IBaseView {
     }
 
     override fun lockScreen() {
+        ViewsUtil.showViews(lockScreen)
+    }
+
+    override fun unlockScreen() {
+        ViewsUtil.goneViews(lockScreen)
     }
 
     override fun hideSoftKeyboard() {
         ViewsUtil.hideSoftKeyboard(window.decorView)
-    }
-
-    override fun unlockScreen() {
     }
 
     override fun showMessage(message: CharSequence) {

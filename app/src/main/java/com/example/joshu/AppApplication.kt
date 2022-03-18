@@ -4,6 +4,7 @@ import android.app.Application
 import android.util.Log
 import androidx.appcompat.app.AppCompatDelegate
 import com.example.joshu.di.Injector
+import com.example.joshu.BuildConfig
 import timber.log.Timber
 
 class AppApplication: Application() {
