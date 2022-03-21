@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="@dimen/widget_4_cells"
+    android:minHeight="@dimen/widget_2_cells"
+    android:minResizeHeight="@dimen/widget_1_cell"
+    android:minResizeWidth="@dimen/widget_4_cells"
+    android:initialLayout="@layout/widget_tasklist"
+    android:widgetCategory="home_screen"
+    android:resizeMode="horizontal|vertical"
+    android:previewImage="@drawable/widget_preview_tasklist"
+    android:updatePeriodMillis="3600000">
+</appwidget-provider>

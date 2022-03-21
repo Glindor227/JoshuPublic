@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  settings -->
+    <string name="menu_settings">Настройки</string>
+    <string name="settings_title">Joshu mini</string>
+    <string name="settings_buy_premium_title">Купить Premium аккаунт</string>
+    <string name="settings_account_title">АККАУНТ</string>
+    <string name="settings_settings_title">НАСТРОЙКИ</string>
+    <string name="settings_tasks_title">ЗАДАЧИ</string>
+    <string name="settings_about_title">О ПРИЛОЖЕНИИ</string>
+    <string name="settings_help_title">ПОМОЩЬ</string>
+
+    <!--  profile -->
+    <string name="settings_buy_premium_summary">Обнови уровень до Joshu Jedi</string>
+    <string name="settings_profile_title">Профиль</string>
+    <string name="settings_delete_account_title">Удалить аккаунт</string>
+    <string name="settings_delete_account_summary">Все данные приложения будут удалены</string>
+    <string name="settings_logout_title">Выйти из аккаунта</string>
+    <string name="account_name_title">Имя пользователя</string>
+    <string name="account_email_title">Email пользователя</string>
+    <string name="account_phone_title">Телефон пользователя</string>
+    <string name="settings_logout_message">Вы действительно хотите выйти из аккаунта?</string>
+    <string name="settings_delete_message">Вы действительно хотите удалить аккаунт вместе с задачами?</string>
+
+    <!--  app settings -->
+    <string name="settings_tab_bar_title">Панель вкладок</string>
+    <string name="settings_tab_bar_summary">"Вы можете выбрать, что показывать или скрывать на панели вкладок"</string>
+    <string name="settings_start_of_week_title">Неделя начинается с</string>
+    <string name="settings_sounds_title">Звуки и уведомления</string>
+    <string name="settings_time_format_title">"24- часовой формат времени "</string>
+    <string name="settings_synchronization_title">Синхронизация</string>
+    <string-array name="settings_start_of_week_entries">
+        <item>Понедельник</item>
+        <item>Вторник</item>
+        <item>Среда</item>
+        <item>Четверг</item>
+        <item>Пятница</item>
+        <item>Суббота</item>
+        <item>Воскресенье</item>
+    </string-array>
+
+    <!--  tab bar -->
+    <string name="settings_tabbar_lifehack_title">Лайфхак</string>
+    <string name="settings_tabbar_lifehack_summary">Читай советы для повышения продуктивности</string>
+    <string name="settings_tabbar_calendar_title">Календарь</string>
+    <string name="settings_tabbar_calendar_summary">Просматривай задачи в календаре и управляй ими</string>
+    <string name="settings_tabbar_folders_title">Папки</string>
+    <string name="settings_tabbar_folders_summary">Группируй задачи как тебе удобно</string>
+    <string name="settings_tabbar_doing_title">Делаю</string>
+    <string name="settings_tabbar_do_summary">Следи за начатыми задачами, чтобы доводить их до конца</string>
+    <string name="settings_tabbar_wait_title">Жду</string>
+    <string name="settings_tabbar_wait_summary">Передавай задачи Joshu и следи за выполнением</string>
+
+    <!--  tasks -->
+    <string name="settings_tasks_summary">Вы можете выбрать, в какую папку задачи будут сохраняться по умолчанию, а так же отображение завершенных задач.</string>
+    <string name="settings_tasks_done_title">Показывать готовые задачи</string>
+    <string name="settings_tasks_done_summary">Отображать на главном экране задачи, завершенные сегодня</string>
+    <string name="settings_default_list_title">Список по умолчанию</string>
+    <string name="settings_last_used_list">Последний использованный</string>
+
+    <!--  sounds -->
+    <string name="settings_sounds_summary">Вы можете настроить способ получения уведомлений, а также различные действия, которые вы можете предпринять.</string>
+    <string name="smart_notification_title">Умные уведомления</string>
+    <string name="settings_vibration_title">Вибрация</string>
+    <string name="notification_sound_title">Звук уведомлений</string>
+    <string name="notification_bot_title">Уведомления в чат-бот</string>
+    <string name="notification_push_title">Push-уведомления</string>
+    <string name="smart_notification_summary">Автонастройка уведомлений по приоритетности задач</string>
+    <string name="notification_push_summary">Включить push-уведомления для всех задач</string>
+
+    <!--  synchronization -->
+    <string name="sync_add_calendar_title">Подключить другой календарь</string>
+    <string name="sync_add_bot_title">Подключить чат-бот</string>
+    <string name="sync_subscribe_calendar_title">Подписаться на календарь</string>
+    <string name="sync_add_bot_summary">Подключение чат-бота  для получения напоминаний в месенджер - телеграм</string>
+    <string name="sync_subscribe_summary">Подключение календаря другого пользователя для совместной работы и просмотра графиков</string>
+    <string name="sync_add_calendar_switch_summary">Задачи из других календарей будут отображаться в календаре Joshu</string>
+    <string name="sync_subscribe_switch_summary">Подписывайтесь и следите за событиями в Google Календаре, Outlook и т.д.</string>
+    <string name="sync_subscribe_calendar_button">Добавить календарь</string>
+    <string name="sync_add_calendar_auth_title">Авторизация</string>
+    <string name="sync_add_calendar_auth_summary">Необходимо авторизоваться для синхронизации других привязанных календарей</string>
+    <string name="authorization_with_google">Авторизоваться через Google</string>
+    <string name="authorization_with_facebook">Авторизоваться через Facebook</string>
+    <string name="authorization_with_vk">Авторизоваться через VKontakte</string>
+
+    <!--  add chatbot -->
+    <string name="chatbot_pros_title">Что умеет чат-бот Joshu:</string>
+    <string name="chatbot_pros_1">Поможет тебе разобраться с навигацией и функциями приложения.</string>
+    <string name="chatbot_pros_2">Быстро поставит для тебя новую задачу прям в мессенджере.</string>
+    <string name="chatbot_pros_3">Напомнит о дедлайнах и приоритетах, подскажет список задач на день.</string>
+    <string name="chatbot_pros_4">Оповестит о готовности задач, которые ты ему делегировал.</string>
+    <string name="goto_chat_bot_summary">Для перехода в чат-бот, необходимо использовать приложение Telegram.</string>
+    <string name="goto_chat_bot_button">Перейти в чат-бот</string>
+
+    <!--  about app -->
+    <string name="terms_of_use_title">Условия пользования</string>
+    <string name="privacy_policy_title">Политика конфидициальности</string>
+    <string name="licence_title">Лицензия</string>
+    <string name="personal_data_title">Согласие на обработку персональных данных</string>
+    <string name="version_title">Версия</string>
+
+    <!--  premium -->
+    <string name="premium_buy_button">7 ДНЕЙ БЕСПЛАТНО\nзатем за 199₽ навсегда</string>
+    <string name="premium_all_button">смотреть все подписки</string>
+    <string name="premium_advert_1">Освобождай время, делегируя дела удаленному помощнику Joshu</string>
+    <string name="premium_advert_2">Joshu ближе чем ты думаешь, и может общаться с тобой в чате</string>
+    <string name="premium_advert_3">Joshu напомнит тебе о важных вещах и ты точно не запутаешься в потоке пушей</string>
+    <string name="premium_title">Премиум - версия Joshu</string>
+
+</resources>

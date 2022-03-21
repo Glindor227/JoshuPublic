@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_header"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_bg_white"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/widget_date_header"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical">
+
+        <TextClock
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/clockDay"
+            android:format12Hour="EEE"
+            android:format24Hour="EEE"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="true"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:textColor="@color/color_2C2C2C"/>
+
+        <TextClock
+            android:id="@+id/clockDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:format12Hour="dd"
+            android:format24Hour="dd"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:scaleX="1.3"
+            android:scaleY="1.3"
+            android:textSize="26sp"
+            android:textColor="@color/color_2C2C2C"/>
+
+        <TextClock
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/clockDay"
+            android:format12Hour="MMMM"
+            android:format24Hour="MMMM"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:paddingHorizontal="2dp"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:textColor="@color/color_2C2C2C"/>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/separator"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="4dp"
+        android:paddingVertical="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_separator_gray" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/tasklist_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:paddingTop="4dp" />
+
+        <TextView
+            android:id="@+id/empty_tasklist_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/statistic_screen_empty_list"
+            android:textColor="@color/color_DDDDDD"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8">
+
+        <ImageButton
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_widget_add" />
+    </FrameLayout>
+
+</LinearLayout>

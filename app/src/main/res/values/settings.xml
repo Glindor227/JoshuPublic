@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  settings -->
+    <string name="menu_settings">Settings</string>
+    <string name="settings_title">Joshu mini</string>
+    <string name="settings_buy_premium_title">Buy Premium account</string>
+    <string name="settings_buy_premium_summary">Level up to Joshu Jedi</string>
+    <string name="settings_account_title">ACCOUNT</string>
+    <string name="settings_settings_title">SETTINGS</string>
+    <string name="settings_tasks_title">TASKS</string>
+    <string name="settings_about_title">ABOUT APP</string>
+    <string name="settings_help_title">HELP</string>
+
+    <!--  profile -->
+    <string name="settings_profile_title">Profile</string>
+    <string name="settings_delete_account_title">Delete account</string>
+    <string name="settings_delete_account_summary">All data will be deleted</string>
+    <string name="settings_logout_title">Log out</string>
+    <string name="account_name_title">Name</string>
+    <string name="account_email_title">Email</string>
+    <string name="account_phone_title">Phone</string>
+    <string name="settings_logout_message">Are you sure you want to log out of your account?</string>
+    <string name="settings_delete_message">Are you sure you want to delete the account with the tasks?</string>
+
+
+    <!--  app settings -->
+    <string name="settings_tab_bar_title">Tab bar</string>
+    <string name="settings_tab_bar_summary">You can choose what to show or hide in the tab bar</string>
+    <string name="settings_start_of_week_title">Week starts from</string>
+    <string name="settings_start_of_week_default" translatable="false">0</string>
+    <string name="settings_sounds_title">Sounds and notifications</string>
+    <string name="settings_time_format_title">Use 24-hour format</string>
+    <string name="settings_time_format_summary_on" translatable="false">13:00</string>
+    <string name="settings_time_format_summary_off" translatable="false">1:00 PM</string>
+    <string name="settings_synchronization_title">Synchronization</string>
+
+    <string-array name="settings_start_of_week_entries">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+
+    <string-array name="settings_start_of_week_entryValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <!--  tab bar -->
+    <string name="settings_tabbar_lifehack_title">Lifehack</string>
+    <string name="settings_tabbar_lifehack_summary">Read tips to improve your productivity</string>
+    <string name="settings_tabbar_calendar_title">Calendar</string>
+    <string name="settings_tabbar_folders_title">Folders</string>
+    <string name="settings_tabbar_doing_title">Doing</string>
+    <string name="settings_tabbar_wait_title">Waiting</string>
+    <string name="settings_tabbar_folders_summary">Group tasks as you like</string>
+    <string name="settings_tabbar_calendar_summary">View and manage tasks in the calendar</string>
+    <string name="settings_tabbar_do_summary">Keep track of the tasks you have started to complete them</string>
+    <string name="settings_tabbar_wait_summary">Send tasks to Joshu</string>
+
+    <!--  tasks -->
+    <string name="settings_tasks_summary">You can choose which folder will be used to save new tasks by default, also displaying completed tasks</string>
+    <string name="settings_tasks_done_title">Show ready tasks</string>
+    <string name="settings_tasks_done_summary">Display tasks completed today on the home screen</string>
+    <string name="settings_default_list_title">Default list</string>
+    <string name="settings_last_used_list">Last used</string>
+    <string name="settings_default_list_default" translatable="false">0</string>
+
+    <!--  sounds -->
+    <string name="settings_sounds_summary">You can customize how you receive notifications.</string>
+    <string name="smart_notification_title">Smart notifications</string>
+    <string name="settings_vibration_title">Vibration</string>
+    <string name="notification_sound_title">Notification sound</string>
+    <string name="notification_bot_title">Notifications into chat-bot</string>
+    <string name="notification_push_title">Push-notifications</string>
+    <string name="smart_notification_summary">Automatic configuration of notifications by priority of tasks</string>
+    <string name="notification_push_summary">Switch on push-notifications for all tasks</string>
+
+    <!--  synchronization -->
+    <string name="sync_add_calendar_title">Add calendar</string>
+    <string name="sync_add_bot_title">Add chatbot</string>
+    <string name="sync_subscribe_calendar_title">Subscribe to calendar</string>
+    <string name="sync_add_bot_summary">Add a chat bot to receive reminders in the messenger - telegram</string>
+    <string name="sync_subscribe_summary">Subscribe to a calendar of another user to collaborate and view charts</string>
+    <string name="sync_add_calendar_switch_summary">Tasks from other calendars will appear in the Joshu calendar</string>
+    <string name="sync_subscribe_switch_summary">Subscribe and follow events in Google Calendar, Outlook, etc.</string>
+    <string name="sync_subscribe_calendar_button">Add calendar</string>
+    <string name="sync_add_calendar_auth_title">Login</string>
+    <string name="sync_add_calendar_auth_summary">Log in to sync other calendars</string>
+    <string name="authorization_with_google">Log in with Google</string>
+    <string name="authorization_with_facebook">Log in with Facebook</string>
+    <string name="authorization_with_vk">Log in with VKontakte</string>
+    <!--  add chatbot -->
+    <string name="chatbot_pros_title">What the Joshu chatbot can do:</string>
+    <string name="chatbot_pros_1">Help you understand the navigation and functions of the application.</string>
+    <string name="chatbot_pros_2">Quickly set a new task for you right in the messenger.</string>
+    <string name="chatbot_pros_3">Remind you of deadlines and priorities, tell you a list of tasks for the day.</string>
+    <string name="chatbot_pros_4">Notify about the readiness of the tasks that you delegated to him.</string>
+    <string name="goto_chat_bot_summary">To go to the chatbot, you must use the Telegram app.</string>
+    <string name="goto_chat_bot_button">Goto chatbot</string>
+
+    <!--  about app -->
+    <string name="terms_of_use_title">Terms of use</string>
+    <string name="privacy_policy_title">Privacy policy</string>
+    <string name="licence_title">Licence</string>
+    <string name="personal_data_title">Consent to the collection and processing of personal data</string>
+    <string name="version_title">Version</string>
+
+    <!--  premium -->
+    <string name="premium_buy_button">7 DAYS FREE\nthen 199₽ forever</string>
+    <string name="premium_all_button">Show all variants</string>
+    <string name="premium_url" translatable="false">http://joshu.tilda.ws/#rec231170298</string>
+    <string name="premium_advert_1">Free up time by delegating tasks to Joshu remote assistant</string>
+    <string name="premium_advert_2">Joshu is closer than you think and can chat with you</string>
+    <string name="premium_advert_3">Joshu will remind you of important things and you will definitely not get lost in the flow of push notifications</string>
+    <string name="premium_title">Premium version Joshu</string>
+
+    <!--  settings keys-->
+    <string name="settings_account_key" translatable="false">ACCOUNT</string>
+    <string name="app_settings_key" translatable="false">SETTINGS</string>
+    <string name="settings_tasks_key" translatable="false">TASKS</string>
+    <string name="settings_about_key" translatable="false">ABOUT_APP</string>
+    <string name="settings_help_key" translatable="false">HELP</string>
+    <string name="settings_premium_key" translatable="false">BUY_PREMIUM</string>
+
+    <string name="settings_start_of_week_key" translatable="false">START_OF_WEEK</string>
+    <string name="settings_time_format_key" translatable="false">TIME_FORMAT</string>
+    <string name="settings_tab_bar_key" translatable="false">TAB_BAR</string>
+    <string name="settings_sounds_key" translatable="false">SOUNDS</string>
+    <string name="settings_sync_key" translatable="false">SYNC</string>
+
+    <string name="show_lifehack_key" translatable="false">LIFEHACK_VISIBILITY</string>
+    <string name="show_calendar_key" translatable="false">CALENDAR_VISIBILITY</string>
+    <string name="show_folders_key" translatable="false">FOLDERS_VISIBILITY</string>
+    <string name="show_do_key" translatable="false">DOING_VISIBILITY</string>
+    <string name="show_wait_key" translatable="false">WAITING_VISIBILITY</string>
+
+    <string name="show_done_tasks" translatable="false">READY_TASKS_VISIBILITY</string>
+    <string name="default_list_key" translatable="false">DEFAULT_LIST_BUTTON</string>
+    <string name="default_list_variants_key" translatable="false">DEFAULT_LIST</string>
+
+    <string name="smart_notification_key" translatable="false">SMART_NOTIFICATIONS</string>
+    <string name="vibration_key" translatable="false">VIBRATION</string>
+    <string name="notification_sound_key" translatable="false">NOTIFICATION_SOUND</string>
+    <string name="notification_bot_key" translatable="false">NOTIFICATION_BOT</string>
+    <string name="notification_push_key" translatable="false">NOTIFICATION_PUSH</string>
+
+    <string name="sync_add_calendar_key" translatable="false">ADD_CALENDAR</string>
+    <string name="sync_add_bot_key" translatable="false">ADD_CHAT_BOT</string>
+    <string name="sync_subscribe_calendar_key" translatable="false">SUBSCRIBE_CALENDAR</string>
+    <string name="sync_subscribe_calendar_switch_key" translatable="false">SUBSCRIBE_CALENDAR_SWITCH</string>
+    <string name="sync_subscribe_calendar_button_key" translatable="false">SUBSCRIBE_CALENDAR_BUTTON</string>
+    <string name="sync_add_calendar_switch_key" translatable="false">ADD_CALENDAR_SWITCH</string>
+    <string name="sync_add_calendar_auth_key" translatable="false">ADD_CALENDAR_AUTH</string>
+
+    <string name="terms_of_use_key" translatable="false">TERMS_OF_USE</string>
+    <string name="privacy_policy_key" translatable="false">PRIVACY_POLICY</string>
+    <string name="licence_key" translatable="false">LICENCE</string>
+    <string name="personal_data_key" translatable="false">PERSONAL_DATA</string>
+    <string name="version_key" translatable="false">VERSION</string>
+
+    <string name="settings_profile_key" translatable="false">PROFILE</string>
+    <string name="account_name_key" translatable="false">USER_DISPLAY_NAME</string>
+    <string name="account_email_key" translatable="false">USER_EMAIL</string>
+    <string name="account_phone_key" translatable="false">USER_PHONE</string>
+    <string name="account_logout_key" translatable="false">LOGOUT</string>
+    <string name="account_delete_key" translatable="false">DELETE</string>
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:title="@string/settings_synchronization_title"
+    android:key="@string/settings_sync_key">
+
+    <Preference
+        android:key="@string/sync_add_calendar_key"
+        android:title="@string/sync_add_calendar_title"
+        android:fragment="com.example.joshu.ui.settings.PreferenceFragmentImpl"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false">
+        <extra
+            android:name="PREFERENCE_XML"
+            android:value="prefs_add_calendar"/>
+    </Preference>
+
+    <Preference
+        android:key="@string/sync_add_bot_key"
+        android:summary="@string/sync_add_bot_summary"
+        android:title="@string/sync_add_bot_title"
+        android:fragment="com.example.joshu.ui.settings.sync.SettingsChatBotFragmentImpl"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false"/>
+
+    <Preference
+        android:key="@string/sync_subscribe_calendar_key"
+        android:summary="@string/sync_subscribe_summary"
+        android:title="@string/sync_subscribe_calendar_title"
+        android:fragment="com.example.joshu.ui.settings.PreferenceFragmentImpl"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false">
+        <extra
+            android:name="PREFERENCE_XML"
+            android:value="prefs_subscribe_calendar"/>
+    </Preference>
+
+</PreferenceScreen>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout="@layout/preference_about_icon"
+    app:title="@string/settings_about_title">
+
+    <PreferenceCategory android:layout="@layout/preference_about_icon">
+        <Preference
+            android:key="@string/terms_of_use_key"
+            app:allowDividerBelow="true"
+            android:fragment="com.example.joshu.ui.settings.aboutapp.AboutAppInfoFragment"
+            app:iconSpaceReserved="false"
+            android:iconSpaceReserved="false"
+            app:title="@string/terms_of_use_title" >
+            <extra
+                android:name="TITLE"
+                android:value="@string/terms_of_use_title"/>
+            <extra
+                android:name="CONTENT"
+                android:value="terms_of_use"/>
+        </Preference>
+
+        <Preference
+            android:key="@string/privacy_policy_key"
+            app:allowDividerAbove="true"
+            app:allowDividerBelow="true"
+            android:fragment="com.example.joshu.ui.settings.aboutapp.AboutAppInfoFragment"
+            app:iconSpaceReserved="false"
+            android:iconSpaceReserved="false"
+            app:title="@string/privacy_policy_title" >
+            <extra
+                android:name="TITLE"
+                android:value="@string/privacy_policy_title"/>
+            <extra
+                android:name="CONTENT"
+                android:value="privacy_policy"/>
+        </Preference>
+
+        <Preference
+            android:key="@string/licence_key"
+            app:allowDividerAbove="true"
+            app:allowDividerBelow="true"
+            android:fragment="com.example.joshu.ui.settings.aboutapp.AboutAppInfoFragment"
+            app:iconSpaceReserved="false"
+            android:iconSpaceReserved="false"
+            app:title="@string/licence_title" >
+            <extra
+                android:name="TITLE"
+                android:value="@string/licence_title"/>
+        </Preference>
+
+        <Preference
+            android:key="@string/personal_data_key"
+            app:allowDividerAbove="true"
+            app:allowDividerBelow="true"
+            android:fragment="com.example.joshu.ui.settings.aboutapp.AboutAppInfoFragment"
+            app:iconSpaceReserved="false"
+            android:iconSpaceReserved="false"
+            app:title="@string/personal_data_title" >
+            <extra
+                android:name="TITLE"
+                android:value="@string/personal_data_title"/>
+            <extra
+                android:name="CONTENT"
+                android:value="security"/>
+        </Preference>
+
+        <Preference
+            android:key="@string/version_key"
+            android:layout="@layout/preference_list"
+            app:allowDividerAbove="true"
+            app:iconSpaceReserved="false"
+            android:iconSpaceReserved="false"
+            app:title="@string/version_title" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

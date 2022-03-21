@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:title="@string/settings_account_title">
+
+    <Preference
+        android:key="@string/settings_premium_key"
+        android:layout="@layout/preference_premium"
+        android:summary="@string/settings_buy_premium_summary"
+        android:title="@string/settings_buy_premium_title"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false"/>
+
+    <Preference
+        android:title="@string/settings_profile_title"
+        android:key="@string/settings_profile_key"
+        app:fragment="com.example.joshu.ui.settings.PreferenceFragmentImpl"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false">
+        <extra
+            android:name="PREFERENCE_XML"
+            android:value="prefs_profile"/>
+    </Preference>
+
+    <Preference
+        android:key="@string/account_delete_key"
+        android:summary="@string/settings_delete_account_summary"
+        android:title="@string/settings_delete_account_title"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false"/>
+
+    <Preference
+        android:key="@string/account_logout_key"
+        android:title="@string/settings_logout_title"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false"/>
+
+</PreferenceScreen>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:key="@string/settings_tab_bar_key"
+    app:title="@string/settings_tab_bar_title">
+
+    <PreferenceCategory
+        android:layout="@layout/preference_screen_summary"
+        android:summary="@string/settings_tab_bar_summary" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/show_lifehack_key"
+        android:summary="@string/settings_tabbar_lifehack_summary"
+        app:title="@string/settings_tabbar_lifehack_title"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false"/>
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/show_calendar_key"
+        android:summary="@string/settings_tabbar_calendar_summary"
+        app:title="@string/settings_tabbar_calendar_title"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false"/>
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/show_folders_key"
+        android:summary="@string/settings_tabbar_folders_summary"
+        app:title="@string/settings_tabbar_folders_title"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false"/>
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/show_do_key"
+        android:summary="@string/settings_tabbar_do_summary"
+        app:title="@string/settings_tabbar_doing_title"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false"/>
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/show_wait_key"
+        android:summary="@string/settings_tabbar_wait_summary"
+        app:title="@string/settings_tabbar_wait_title"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false"/>
+
+</PreferenceScreen>

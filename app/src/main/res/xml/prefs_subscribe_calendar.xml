@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:key="@string/sync_subscribe_calendar_key"
+    android:title="@string/sync_subscribe_calendar_title">
+
+    <SwitchPreference
+        android:key="@string/sync_subscribe_calendar_switch_key"
+        android:title="@string/sync_subscribe_calendar_title"
+        android:summary="@string/sync_subscribe_switch_summary"
+        android:defaultValue="true"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false"/>
+
+    <Preference
+        android:key="@string/sync_subscribe_calendar_button_key"
+        android:icon="@drawable/ic_add_folder_24dp"
+        android:title="@string/sync_subscribe_calendar_button"
+        android:dependency="@string/sync_subscribe_calendar_switch_key"
+        android:shouldDisableView="true" />
+
+</PreferenceScreen>

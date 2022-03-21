@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/settings_default_list_title">
+
+    <com.example.joshu.ui.settings.tasks.FolderListPreference
+        android:defaultValue="@string/settings_default_list_default"
+        android:key="@string/default_list_variants_key"
+        android:layout="@layout/fragment_settings_list"
+        android:selectable="false" />
+</PreferenceScreen>

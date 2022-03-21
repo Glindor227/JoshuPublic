@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/settings_title">
+
+    <Preference
+        android:icon="@drawable/ic_premium_plan"
+        android:key="@string/settings_premium_key"
+        android:layout="@layout/preference_premium"
+        android:title="@string/settings_buy_premium_title" />
+    <Preference
+        android:icon="@drawable/ic_setting_profile"
+        android:key="@string/settings_account_key"
+        android:layout="@layout/preference_list"
+        android:title="@string/settings_account_title" >
+        <extra
+            android:name="PREFERENCE_XML"
+            android:value="prefs_account"/>
+    </Preference>
+    <Preference
+        android:icon="@drawable/ic_setting"
+        android:key="@string/app_settings_key"
+        android:title="@string/settings_settings_title" >
+        <extra
+            android:name="PREFERENCE_XML"
+            android:value="prefs_settings"/>
+    </Preference>
+    <Preference
+        android:icon="@drawable/ic_setting_task"
+        android:key="@string/settings_tasks_key"
+        android:title="@string/settings_tasks_title">
+        <extra
+            android:name="PREFERENCE_XML"
+            android:value="prefs_tasks"/>
+    </Preference>
+    <Preference
+        android:icon="@drawable/ic_setting_about_app"
+        android:key="@string/settings_about_key"
+        android:title="@string/settings_about_title" >
+        <extra
+            android:name="PREFERENCE_XML"
+            android:value="prefs_about"/>
+    </Preference>
+    <Preference
+        android:icon="@drawable/ic_setting_help"
+        android:key="@string/settings_help_key"
+        android:title="@string/settings_help_title" />
+
+
+</PreferenceScreen>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:title="@string/settings_sounds_title"
+    android:key="@string/settings_sounds_key">
+
+    <PreferenceCategory
+        android:layout="@layout/preference_screen_summary"
+        android:summary="@string/settings_sounds_summary"
+        app:singleLineTitle="false" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/smart_notification_key"
+        android:summary="@string/smart_notification_summary"
+        app:title="@string/smart_notification_title"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false"/>
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/vibration_key"
+        app:title="@string/settings_vibration_title"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false"/>
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/notification_sound_key"
+        app:title="@string/notification_sound_title"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false"/>
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/notification_bot_key"
+        app:title="@string/notification_bot_title"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false"/>
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/notification_push_key"
+        android:summary="@string/notification_push_summary"
+        app:title="@string/notification_push_title"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false"/>
+
+</PreferenceScreen>

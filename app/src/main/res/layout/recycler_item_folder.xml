@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="8dp"
+        android:background="@color/color_DDDDDD"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/folderIconView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_below="@id/divider"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_folder_selected" />
+
+    <TextView
+        android:id="@+id/folderTitleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:layout_marginTop="4dp"
+        android:layout_toStartOf="@id/countOfTasksView"
+        android:layout_toEndOf="@id/folderIconView"
+        android:includeFontPadding="false"
+        android:textColor="@color/color_666666"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/countOfTasksView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        android:includeFontPadding="false"
+        android:textColor="@color/color_4757EC"
+        android:textSize="16sp" />
+
+</RelativeLayout>

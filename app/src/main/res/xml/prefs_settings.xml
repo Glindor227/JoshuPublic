@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:title="@string/settings_settings_title">
+
+    <Preference
+        android:key="@string/settings_tab_bar_key"
+        android:summary="@string/settings_tab_bar_summary"
+        android:title="@string/settings_tab_bar_title"
+        android:fragment="com.example.joshu.ui.settings.PreferenceFragmentImpl"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false">
+        <extra
+            android:name="PREFERENCE_XML"
+            android:value="prefs_tabbar"/>
+    </Preference>
+
+    <ListPreference
+        android:defaultValue="@string/settings_start_of_week_default"
+        android:entryValues="@array/settings_start_of_week_entryValues"
+        android:key="@string/settings_start_of_week_key"
+        android:layout="@layout/preference_list"
+        android:title="@string/settings_start_of_week_title"
+        app:entries="@array/settings_start_of_week_entries"
+        app:useSimpleSummaryProvider="true"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false"/>
+
+    <Preference
+        android:key="@string/settings_sounds_key"
+        android:title="@string/settings_sounds_title"
+        android:fragment="com.example.joshu.ui.settings.PreferenceFragmentImpl"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false">
+        <extra
+            android:name="PREFERENCE_XML"
+            android:value="prefs_sounds"/>
+    </Preference>
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/settings_time_format_key"
+        android:summaryOff="@string/settings_time_format_summary_off"
+        android:summaryOn="@string/settings_time_format_summary_on"
+        app:title="@string/settings_time_format_title"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false"/>
+
+    <Preference
+        android:key="@string/settings_sync_key"
+        android:title="@string/settings_synchronization_title"
+        android:fragment="com.example.joshu.ui.settings.PreferenceFragmentImpl"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false">
+        <extra
+            android:name="PREFERENCE_XML"
+            android:value="prefs_sync"/>
+    </Preference>
+</PreferenceScreen>

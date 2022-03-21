@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/widgetItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingHorizontal="8dp">
+
+        <ImageView
+            android:id="@+id/priorityView"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_alignTop="@id/titleView"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/priority_3" />
+
+        <TextView
+            android:id="@+id/titleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@id/priorityView"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:textColor="@color/color_2C2C2C"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/folderView"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleView"
+            android:layout_alignStart="@id/titleView"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@android:color/transparent"
+            android:includeFontPadding="false"
+            android:textColor="@color/color_666666"
+            android:textSize="12sp"
+            app:chipStrokeColor="@color/color_DDDDDD"
+            app:chipStrokeWidth="1dp" />
+
+        <TextView
+            android:id="@+id/timeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/folderView"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="4dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/color_666666"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</FrameLayout>

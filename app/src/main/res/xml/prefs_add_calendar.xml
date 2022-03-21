@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:key="@string/sync_add_calendar_key"
+    android:title="@string/sync_add_calendar_title">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/sync_add_calendar_switch_key"
+        android:summary="@string/sync_add_calendar_switch_summary"
+        android:title="@string/sync_add_calendar_title"
+        app:allowDividerBelow="false"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false"/>
+
+    <com.example.joshu.ui.settings.sync.AuthorizationPreference
+        android:key="@string/sync_add_calendar_auth_key"
+        android:layout="@layout/preference_add_calendar"
+        android:selectable="false"
+        android:summary="@string/sync_add_calendar_auth_summary"
+        android:title="@string/sync_add_calendar_auth_title" />
+
+</PreferenceScreen>

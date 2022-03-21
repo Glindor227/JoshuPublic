@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:title="@string/settings_tasks_title">
+
+    <PreferenceCategory
+        android:layout="@layout/preference_screen_summary"
+        android:summary="@string/settings_tasks_summary" />
+
+    <SwitchPreference
+        android:key="@string/show_done_tasks"
+        android:summary="@string/settings_tasks_done_summary"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false"
+        app:title="@string/settings_tasks_done_title" />
+
+    <Preference
+        android:title="@string/settings_default_list_title"
+        android:key="@string/default_list_key"
+        android:layout="@layout/preference_list"
+        app:iconSpaceReserved="false"
+        android:iconSpaceReserved="false"
+        android:fragment="com.example.joshu.ui.settings.PreferenceFragmentImpl">
+        <extra
+            android:name="PREFERENCE_XML"
+            android:value="prefs_default_list"/>
+    </Preference>
+
+</PreferenceScreen>

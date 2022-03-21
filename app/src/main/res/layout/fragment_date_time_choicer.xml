@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/button_clear_text"
+            android:id="@+id/dateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_clear_text_height"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <include layout="@layout/button_clear_text"
+            android:id="@+id/timeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_clear_text_height"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:theme="@style/AppTheme.Picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateButton"
+            />
+
+        <LinearLayout
+            android:id="@+id/layoutCalendar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timePicker">
+
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mcv_showOtherDates="none"
+            app:mcv_selectionColor="@color/color_676EE3"
+            app:mcv_weekDayTextAppearance="@style/TextAppearance.MaterialCalendarWidget.JoshuMedium"
+            app:mcv_dateTextAppearance="@style/TextAppearance.MaterialCalendarWidget.JoshuMedium"
+            app:mcv_headerTextAppearance="@style/TextAppearance.MaterialCalendarWidget.JoshuMedium"
+            app:mcv_tileHeight="35sp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutButtons"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/repeatLayout">
+
+            <include layout="@layout/button_clear_text"
+                android:id="@+id/buttonTimeCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <include layout="@layout/button_clear_text"
+                android:id="@+id/buttonTimeOk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/repeatLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutCalendar">
+            <include layout="@layout/button_clear_text"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:id="@+id/buttonRepeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <RadioGroup
+                android:id="@+id/repeatRadioGroup"
+                android:checkedButton="@+id/radio_button_1"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/activity_horizontal_medium_margin"
+                android:layout_height="wrap_content">
+            </RadioGroup>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

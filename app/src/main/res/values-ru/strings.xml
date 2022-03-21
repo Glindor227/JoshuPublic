@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="statistic">Статистика</string>
+    <string name="calendar">Календарь</string>
+    <string name="list">Папки</string>
+    <string name="today">Сегодня</string>
+    <string name="task">Задача</string>
+    <string name="main">Главная</string>
+    <string name="lifehack">Лайфхак</string>
+
+    <string name="sign_in">Войти</string>
+
+    <!--  priority  -->
+    <string name="priority_important_urgently">Важно-Срочно</string>
+    <string name="priority_important_do_not_rush">Важно-Несрочно</string>
+    <string name="priority_never_mind_urgently">Неважно-Срочно</string>
+    <string name="priority_never_mind_do_not_rush">Неважно-Несрочно</string>
+
+    <!--  auth main screen  -->
+    <string name="auth_main_welcome">Добро пожаловать в JOSHU!</string>
+    <string name="auth_main_login">Продолжить через Email</string>
+    <string name="auth_main_title">Продолжая, вы соглашаетесь с Условиями\nиспользования и Политикой конфиденциальности\nJoshu.</string>
+    <string name="auth_main_reg">Регистрация через Email</string>
+    <string name="auth_main_cancel_facebook">Отмена входа через facebook</string>
+
+    <!--  forgot screen  -->
+    <string name="forgot_title">Введите ваш Email-адрес для восстановления пароля</string>
+    <string name="forgot_btn_text">Восстановить пароль</string>
+
+    <!--  auth email screen  -->
+    <string name="enter_address_email_hint">Введите адрес электронной почты</string>
+    <string name="enter_your_password">Введите пароль</string>
+    <string name="enter_your_login">Введите логин</string>
+    <string name="forgot_password">Забыли пароль?</string>
+    <string name="login">Войти</string>
+    <string name="enter_your_email_and_password">Введите ваш email и пароль</string>
+
+    <!--  registration email screen  -->
+    <string name="reg_email_title">Регистрация</string>
+    <string name="reg_email_subtitle">Регистрация с использование email(почты пользователя)</string>
+    <string name="reg_email_btn">Создать аккаунт</string>
+    <string name="repid_your_password">Повторите пароль</string>
+
+    <!--  recovery password for email -->
+    <string name="recovery_password_success">Инструкция по восстановлению пароля отправлена на почту</string>
+
+    <!--  create task screen  -->
+    <string name="task_create_success">Задача успешно добавлена</string>
+    <string name="task_text_add_to_clipboard_success">Сохранено в буфер обмена</string>
+    <string name="task_save_changes">Сохранить изменения?</string>
+
+    <!--  update task screen  -->
+    <string name="task_update_success">Задача успешно обновлена</string>
+
+    <!--  common  -->
+    <string name="ok">Ок</string>
+    <string name="cancel">Отмена</string>
+
+    <!--  repeat  -->
+    <string name="repeat_no">Не повторять</string>
+    <string name="repeat_every_day">Каждый день</string>
+    <string name="repeat_every_week">Каждую неделю</string>
+    <string name="repeat_every_month">Каждый месяц</string>
+    <string name="repeat_every_year">Каждый год</string>
+
+    <!--  statistic screen -->
+    <string name="statistic_screen_empty_list">Список задач пуст</string>
+    <string name="statistic_screen_today_prefix">Сегодня %s</string>
+
+    <!--  deafault folder name  -->
+    <string name="folder_work">Работа</string>
+    <string name="folder_home">Дом</string>
+    <string name="folder_study">Учеба</string>
+    <string name="folder_health">Здоровье</string>
+    <string name="folder_recreation">Отдых</string>
+
+    <!--  shortcuts -->
+    <string name="add_task">Добавить задачу</string>
+    <string name="calendar_shortcut_long_label">Календарь</string>
+    <string name="today_shortcut_long_label">Сегодня</string>
+    <string name="static_shortcut_disabled_message">Вы можете не можете ярлык</string>
+
+    <!--  selected folder  -->
+    <string name="folder_selected_create_folder">Создать папку</string>
+    <!--  chips filter  -->
+    <string name="chip_wait">Жду</string>
+    <string name="chip_tasks">Задачи</string>
+    <string name="chip_doing">Делаю</string>
+    <string name="chip_finish">Готово</string>
+    <string name="chip_habits">Привычки</string>
+
+    <!--  widget  -->
+    <string name="widget_add">Добавить задачу</string>
+    <string name="task_delete">Удаляется задача</string>
+    <string name="send_task_message">Передаем вашу задачу персональному ассистенту Joshu</string>
+
+    <!--  exception  -->
+    <string name="no_material_button_exception_title">Кнопка должна наследоваться от MaterialButton</string>
+
+    <!--  lists screen -->
+    <string name="lists_screen_empty_list">Список папок пуст</string>
+    <string name="lists_create_folder">Создать новую папку</string>
+    <string name="new_folder_hint">Введите название папки</string>
+    <string name="folder_create_success">Папка успешно добавлена</string>
+    <string name="folder_delete_message">Вы действительно хотите удалить папку вместе с задачами?</string>
+
+    <!--  message dialog -->
+    <string name="dialog_positive_button">ОК</string>
+    <string name="dialog_negative_button">Отмена</string>
+    <string name="or">Или</string>
+</resources>

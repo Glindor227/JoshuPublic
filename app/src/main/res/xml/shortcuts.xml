@@ -1,0 +1,50 @@
+<?xml version ="1.0" encoding ="utf-8"?><!--  Learn More about how to use App Actions: https://developer.android.com/guide/actions/index.html -->
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="task"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_add_circle_24"
+        android:shortcutShortLabel="@string/add_task"
+        android:shortcutDisabledMessage="@string/static_shortcut_disabled_message">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.joshu.app.debug"
+            android:targetClass="com.example.joshu.ui.mainScreen.MainScreenActivityImpl" />
+
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+    <!-- TODAY SHORTCUT -->
+    <shortcut
+        android:shortcutId="today"
+        android:enabled="true"
+        android:icon="@drawable/ic_today"
+        android:shortcutShortLabel="@string/today"
+        android:shortcutLongLabel="@string/today_shortcut_long_label"
+        android:shortcutDisabledMessage="@string/static_shortcut_disabled_message">
+
+        <intent
+            android:action="com.example.joshu.ui.mainScreen.today"
+            android:targetPackage="com.joshu.app.debug"
+            android:targetClass="com.example.joshu.ui.mainScreen.MainScreenActivityImpl"/>
+
+    </shortcut>
+
+    <!-- CALENDAR SHORTCUT -->
+    <shortcut
+        android:shortcutId="calendar"
+        android:enabled="true"
+        android:icon="@drawable/ic_calendar"
+        android:shortcutShortLabel="@string/calendar"
+        android:shortcutLongLabel="@string/calendar_shortcut_long_label"
+        android:shortcutDisabledMessage="@string/static_shortcut_disabled_message">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.joshu.app.debug"
+            android:targetClass="com.example.joshu.ui.mainScreen.MainScreenActivityImpl"/>
+    </shortcut>
+
+
+    <!-- Specify more shortcuts here. -->
+</shortcuts>
